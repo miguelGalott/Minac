@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ 
+    <title>Minac Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="Css/geral.css">
+ 
+</head>
+ 
+<body>
+
+<header id="TopoDiv">
+ 
+
+    <img id="LogoTopoDiv" src="imagens/logoMinac.png" alt="Logo Minac">
+ 
+    <div class="topo-pesquisa">
+        <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Digite um item para seu Pet">
+    </div>
+ 
+
+
+    <img id="carrinhoTopo" src="imagens/carrinho.png" alt="Carrinho">
+    </a>
+>
+    <button id="BotaoMenu" class="menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+ 
+    <aside id="Sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+        <nav>
+            <a href="Pages/usuario.html">Usuario</a>
+            <a href="#">Configurações</a>
+            <a href="#" onclick="toggleMenu()">Fechar</a>
+        </nav>
+    </aside>
+ 
+</header>
+ 
+ 
+<!-- ================= CATEGORIAS (carrossel) ================= -->
+<section id="Categorias">
+ 
+    <!-- Colocar imagens em formato retangular com uma principal no meio (maior)
+         e duas nas laterais (menores, mais escuras/sombreadas), cada uma com o nome
+         da categoria. A da esquerda é a que já passou e a da direita é a próxima.
+         Ao clicar numa lateral (ou nas setas), troca rapidamente de categoria.
+         Como fazer: guardar as categorias numa lista (Ração, Brinquedos, Acessórios...)
+         e um número que diz qual é a atual. Quando clicar, soma ou subtrai 1 nesse número
+         e redesenha as 3 imagens. O CSS faz o efeito de tamanho e sombra. -->
+ 
+    <div class="carrossel">
+        <div class="cat cat-anterior" id="catAnterior">
+            <!-- anterior -->
+        </div>
+ 
+        <div class="cat cat-atual" id="catAtual">
+            <!-- principal -->
+        </div>
+ 
+        <div class="cat cat-proxima" id="catProxima">
+            <!--  proximo -->
+        </div>
+    </div>
+ 
+</section>
+ 
+ 
+
+
+<section id="ofertas">
+ 
+    <h2 id="textoOferta">Destaques para seu Pet</h2>
+ 
+    <!-- Aqui vão ficar 3 produtos na horizontal, e continua descendo (linhas de 3)
+         até acabar os produtos que estão em destaque.
+ 
+         Como fazer (ideia):
+         1. No Java (Script/API.java) fazer um SELECT no banco:
+            SELECT id, nome, preco, imagem FROM produto WHERE destaque = TRUE;
+         2. O Java devolve a lista (em JSON) para a página.
+         3. Na página, para cada produto, criar um card igual ao de baixo
+            e colocar dentro da div "listaDestaques".
+         4. No CSS usar display: grid com 3 colunas para ficar 3 por linha.
+         Quando clicar no card, abrir Pages/infoProduto.html com o id do produto. -->
+ 
+    <div id="listaDestaques" class="lista-produtos">
+ 
+        <div class="card-produto">
+            <img src="" alt="Imagem do produto">
+            <p class="produto-titulo">Caucinha preta com dildo de borracha</p>
+            <p class="produto-preco">R$ 1000,00</p>
+        </div>
+ 
+    </div>
+ 
+</section>
+ 
+ 
+<script>
+
+    function toggleMenu() {
+        document.getElementById("Sidebar").classList.toggle("aberto");
+    }
+</script>
+ 
+</body>
+</html>
+ 
