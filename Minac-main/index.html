@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minac Shop</title>
+    <link rel="stylesheet" href="Css/geral.css">
+    <!-- Fonte manuscrita (Short Stack) e serifada (Alike) -->
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones (carrinho e redes sociais) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Checkbox escondida: controla o menu lateral sem JavaScript -->
+<input type="checkbox" id="menuToggle">
+
+<header id="topoDiv">
+    <!-- IMAGEM: logo da Minac (gato preto com o nome). Clica e volta para a home -->
+    <a href="index.html"><img id="logoTopoDiv" src="imagens/logoMinac.png" alt="Logo Minac"></a>
+
+    <div class="topo-pesquisa">
+        <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Digite um item para seu Pet">
+        <span class="icone-pesquisa">🧶</span>
+    </div>
+
+    <div class="topo-acoes">
+        <!-- IMAGEM: ícone de carrinho de compras. Clica e vai para a página do carrinho -->
+        <a href="Pages/carrinho.html" class="item-acao">
+            <img id="carrinhoTopo" src="imagens/carrinho.png" alt="Carrinho">
+            <span>Carrinho</span>
+        </a>
+        <!-- Botão "mais": o label abre/fecha o menu lateral (ícone de 3 linhas) -->
+ <label for="menuToggle" class="menu-btn">
+            <span class="hamburguer"><span></span><span></span><span></span></span>
+            <small>mais</small>
+        </label>
+    </header>
+
+    <aside class="sidebar">
+        <label for="menuToggle" class="close-btn" aria-label="Fechar menu">×</label>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="Pages/carrinho.html">Carrinho</a>
+            <a href="Pages/usuario.html">Configurações</a>
+        </nav>
+    </aside>
+</header>
+
+<!-- Menu de categorias -->
+<nav class="bar-categorias">
+    <a href="#">Cachorros</a>
+    <a href="#">Pássaros</a>
+    <a href="#">Gatos</a>
+    <a href="#">Outros pets</a>
+    <a href="#">Contate</a>
+    <a href="#">Promoções</a>
+    <a href="#">Galeria</a>
+</nav>
+
+<!-- Banners principais -->
+<section id="bannersCategorias" class="banners-grid">
+    <a href="#" class="card-banner">
+        <!-- IMAGEM: foto de um cachorro labrador na grama (banner da categoria Cachorros) -->
+        <img src="imagens/cachorro-grama.jpeg" alt="Cachorros">
+    </a>
+    <a href="#" class="card-banner">
+        <!-- IMAGEM: foto de um gato na grama (banner da categoria Gatos) -->
+        <img src="imagens/gato-grama.jpeg" alt="Gatos">
+    </a>
+</section>
+
+<!-- Destaques -->
+<section id="ofertas">
+    <div class="titulo-secao">
+        <h2>Destaques</h2>
+    </div>
+
+    <div class="carrossel-container">
+        <!-- Seta esquerda: leva ao primeiro produto (sem JS, usa âncora) -->
+        <a href="#produto1" class="seta-carrossel seta-esquerda">&#10094;</a>
+
+        <div id="listaDestaques" class="lista-produtos">
+
+            <div class="card-produto" id="produto1">
+                <!-- Botão redondo de carrinho: vai para o carrinho -->
+                <a href="Pages/carrinho.html" class="btn-carrinho-card"><i class="fas fa-shopping-cart"></i></a>
+                <a href="Pages/infoProduto.html">
+                    <div class="img-container">
+                        <!-- IMAGEM: pacote de ração Special Dog (laranja) -->
+                        <img src="imagens/racao-special-dog.png" alt="Quatree Supreme Cão Adulto">
+                    </div>
+                    <p class="produto-titulo">Quatree Supreme Cão Adulto Méd/Gran Frango ...</p>
+                    <p class="produto-preco">R$196</p>
+                </a>
+            </div>
+
+            <div class="card-produto" id="produto2">
+                <a href="Pages/carrinho.html" class="btn-carrinho-card"><i class="fas fa-shopping-cart"></i></a>
+                <a href="Pages/infoProduto.html">
+                    <div class="img-container">
+                        <!-- IMAGEM: coleira vermelha para cachorro -->
+                        <img src="imagens/coleira-vermelha.png" alt="Coleira para cachorro">
+                    </div>
+                    <p class="produto-titulo">Coleira para cachorro porte medio vermelha</p>
+                    <p class="produto-preco">R$67,00</p>
+                </a>
+            </div>
+
+            <div class="card-produto" id="produto3">
+                <a href="Pages/carrinho.html" class="btn-carrinho-card"><i class="fas fa-shopping-cart"></i></a>
+                <a href="Pages/infoProduto.html">
+                    <div class="img-container">
+                        <!-- IMAGEM: brinquedo de borracha em formato de frango amarelo -->
+                        <img src="imagens/frango-borracha.png" alt="Brinquedo frango sonoro">
+                    </div>
+                    <p class="produto-titulo">Brinquedo de cachorro frango sonoro gritador pequeno</p>
+                    <p class="produto-preco">R$16,00</p>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Seta direita: leva ao último produto -->
+        <a href="#produto3" class="seta-carrossel seta-direita">&#10095;</a>
+    </div>
+</section>
+
+<!-- IMAGEM: faixa decorativa com folhas/plantas, separa os produtos do rodapé -->
+<img id="complementPlant" src="imagens/endPlant.png" alt="Folhas decorativas" class="imagem-separadora">
+
+<!-- Rodapé -->
+<section id="cominicacao">
+    <footer class="endPage">
+        <div class="footer-coluna footer-brand">
+            <!-- IMAGEM: logo da Minac no rodapé -->
+            <img src="imagens/logoMinac.png" alt="Logo Minac" class="footer-logo">
+            <div class="redes-sociais">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>A empresa</h3>
+            <ul>
+                <li><a href="#">Conheça o Minac</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Políticas</h3>
+            <ul>
+                <li><a href="#">Termos e condições</a></li>
+                <li><a href="#">Trocas e devoluções</a></li>
+                <li><a href="#">FAQ lojas físicas</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Privacidade</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Campanhas e promoções</h3>
+            <ul>
+                <li><a href="#">Campanhas vigentes</a></li>
+                <li><a href="#">Campanhas encerradas</a></li>
+                <li><a href="#">Cupons</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-coluna footer-pagamento">
+            <h3>Formas de pagamento</h3>
+            <!-- IMAGENS: logos das bandeiras/meios de pagamento aceitos -->
+            <div class="bandeiras-pagamento">
+                <img src="imagens/visa.png" alt="Visa">
+                <img src="imagens/mastercard.png" alt="Mastercard">
+                <img src="imagens/elo.png" alt="Elo">
+                <img src="imagens/diners.png" alt="Diners">
+                <img src="imagens/hipercard.png" alt="Hipercard">
+                <img src="imagens/amex.png" alt="Amex">
+                <img src="imagens/boleto.png" alt="Boleto">
+                <img src="imagens/pix.png" alt="Pix">
+            </div>
+            <div class="selos-seguranca">
+                <!-- IMAGEM: selo "Ótimo" do Reclame Aqui -->
+                <img src="imagens/reclame-aqui.png" alt="Ótimo Reclame Aqui" class="selo-reclameaqui">
+                <!-- IMAGEM: selo prêmio Melhores Empresas 2026 -->
+                <img src="imagens/melhores-empresas.png" alt="Melhores Empresas 2026" class="selo-premio">
+            </div>
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>
