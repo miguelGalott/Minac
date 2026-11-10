@@ -3,52 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minac Shop: rações, coleiras, brinquedos e muito mais para cachorros, gatos, pássaros e outros pets.">
+    <meta name="theme-color" content="#FFF9CC">
     <title>Minac Shop</title>
+    <link rel="icon" href="imagens/logoMinac.png">
     <link rel="stylesheet" href="Css/geral.css">
-    <!-- Fonte manuscrita (Short Stack) e serifada (Alike) -->
+    <!-- Conexão antecipada com as fontes e ícones (carrega mais rápido) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
-    <!-- Font Awesome para ícones (carrinho e redes sociais) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Awesome: ícones do carrinho e das redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
 <!-- Checkbox escondida: controla o menu lateral sem JavaScript -->
-<input type="checkbox" id="menuToggle">
+<input type="checkbox" id="menuToggle" aria-label="Abrir ou fechar o menu">
 
 <header id="topoDiv">
-    <!-- IMAGEM: logo da Minac (gato preto com o nome). Clica e volta para a home -->
-    <a href="index.html"><img id="logoTopoDiv" src="imagens/logoMinac.png" alt="Logo Minac"></a>
+    <a href="index.html"><img id="logoTopoDiv" src="imagens/logoMinac.png" alt="Minac - página inicial"></a>
 
-    <div class="topo-pesquisa">
+    <div class="topo-pesquisa" role="search">
+        <label for="barraPesquisa" class="visually-hidden">Pesquisar produtos</label>
         <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Digite um item para seu Pet">
-        <span class="icone-pesquisa">🧶</span>
+        <span class="icone-pesquisa" aria-hidden="true">🧶</span>
     </div>
 
     <div class="topo-acoes">
-        <!-- IMAGEM: ícone de carrinho de compras. Clica e vai para a página do carrinho -->
         <a href="Pages/carrinho.html" class="item-acao">
-            <img id="carrinhoTopo" src="imagens/carrinho.png" alt="Carrinho">
+            <img id="carrinhoTopo" src="imagens/carrinho.png" alt="">
             <span>Carrinho</span>
         </a>
-        <!-- Botão "mais": o label abre/fecha o menu lateral (ícone de 3 linhas) -->
- <label for="menuToggle" class="menu-btn">
-            <span class="hamburguer"><span></span><span></span><span></span></span>
+        <!-- Botão "mais": o label abre/fecha o menu lateral -->
+        <label for="menuToggle" class="menu-btn">
+            <span class="hamburguer" aria-hidden="true"><span></span><span></span><span></span></span>
             <small>mais</small>
         </label>
-    </header>
-
-    <aside class="sidebar">
-        <label for="menuToggle" class="close-btn" aria-label="Fechar menu">×</label>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="Pages/carrinho.html">Carrinho</a>
-            <a href="Pages/usuario.html">Configurações</a>
-        </nav>
-    </aside>
+    </div>
 </header>
 
+<!-- Fundo escuro: clicar fora fecha o menu -->
+<label for="menuToggle" class="sidebar-fundo" aria-hidden="true"></label>
+
+<aside class="sidebar">
+    <label for="menuToggle" class="close-btn" aria-label="Fechar menu">×</label>
+    <nav aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="Pages/carrinho.html">Carrinho</a>
+        <a href="Pages/usuario.html">Configurações</a>
+    </nav>
+</aside>
+
 <!-- Menu de categorias -->
-<nav class="bar-categorias">
+<nav class="bar-categorias" aria-label="Categorias">
     <a href="#">Cachorros</a>
     <a href="#">Pássaros</a>
     <a href="#">Gatos</a>
@@ -58,141 +65,274 @@
     <a href="#">Galeria</a>
 </nav>
 
-<!-- Banners principais -->
-<section id="bannersCategorias" class="banners-grid">
-    <a href="#" class="card-banner">
-        <!-- IMAGEM: foto de um cachorro labrador na grama (banner da categoria Cachorros) -->
-        <img src="imagens/cachorro-grama.jpeg" alt="Cachorros">
-    </a>
-    <a href="#" class="card-banner">
-        <!-- IMAGEM: foto de um gato na grama (banner da categoria Gatos) -->
-        <img src="imagens/gato-grama.jpeg" alt="Gatos">
-    </a>
-</section>
+<main>
+    <h1 class="visually-hidden">Minac Shop - produtos para o seu pet</h1>
 
-<!-- Destaques -->
-<section id="ofertas">
-    <div class="titulo-secao">
-        <h2>Destaques</h2>
-    </div>
+    <!-- Banners principais -->
+    <section id="bannersCategorias" class="banners-grid" aria-label="Categorias em destaque">
+        <a href="#" class="card-banner">
+            <img src="imagens/cachorro-grama.jpeg" alt="Cachorros" decoding="async">
+        </a>
+        <a href="#" class="card-banner">
+            <img src="imagens/gato-grama.jpeg" alt="Gatos" decoding="async">
+        </a>
+    </section>
 
-    <div class="carrossel-container">
-        <!-- Seta esquerda: leva ao primeiro produto (sem JS, usa âncora) -->
-        <a href="#produto1" class="seta-carrossel seta-esquerda">&#10094;</a>
-
-        <div id="listaDestaques" class="lista-produtos">
-
-            <div class="card-produto" id="produto1">
-                <!-- Botão redondo de carrinho: vai para o carrinho -->
-                <a href="Pages/carrinho.html" class="btn-carrinho-card"><i class="fas fa-shopping-cart"></i></a>
-                <a href="Pages/infoProduto.html">
-                    <div class="img-container">
-                        <!-- IMAGEM: pacote de ração Special Dog (laranja) -->
-                        <img src="imagens/racao-special-dog.png" alt="Quatree Supreme Cão Adulto">
-                    </div>
-                    <p class="produto-titulo">Quatree Supreme Cão Adulto Méd/Gran Frango ...</p>
-                    <p class="produto-preco">R$196</p>
-                </a>
-            </div>
-
-            <div class="card-produto" id="produto2">
-                <a href="Pages/carrinho.html" class="btn-carrinho-card"><i class="fas fa-shopping-cart"></i></a>
-                <a href="Pages/infoProduto.html">
-                    <div class="img-container">
-                        <!-- IMAGEM: coleira vermelha para cachorro -->
-                        <img src="imagens/coleira-vermelha.png" alt="Coleira para cachorro">
-                    </div>
-                    <p class="produto-titulo">Coleira para cachorro porte medio vermelha</p>
-                    <p class="produto-preco">R$67,00</p>
-                </a>
-            </div>
-
-            <div class="card-produto" id="produto3">
-                <a href="Pages/carrinho.html" class="btn-carrinho-card"><i class="fas fa-shopping-cart"></i></a>
-                <a href="Pages/infoProduto.html">
-                    <div class="img-container">
-                        <!-- IMAGEM: brinquedo de borracha em formato de frango amarelo -->
-                        <img src="imagens/frango-borracha.png" alt="Brinquedo frango sonoro">
-                    </div>
-                    <p class="produto-titulo">Brinquedo de cachorro frango sonoro gritador pequeno</p>
-                    <p class="produto-preco">R$16,00</p>
-                </a>
-            </div>
-
+    <!-- Destaques -->
+    <section id="ofertas">
+        <div class="titulo-secao">
+            <h2>Destaques</h2>
         </div>
 
-        <!-- Seta direita: leva ao último produto -->
-        <a href="#produto3" class="seta-carrossel seta-direita">&#10095;</a>
-    </div>
-</section>
+        <div class="carrossel-container">
+            <button type="button" class="seta-carrossel seta-esquerda" aria-label="Produtos anteriores">&#10094;</button>
 
-<!-- IMAGEM: faixa decorativa com folhas/plantas, separa os produtos do rodapé -->
-<img id="complementPlant" src="imagens/endPlant.png" alt="Folhas decorativas" class="imagem-separadora">
+            <div id="listaDestaques" class="lista-produtos">
+
+                <div class="card-produto" id="produto1">
+                    <a href="Pages/carrinho.html" class="btn-carrinho-card" aria-label="Adicionar ao carrinho: Quatree Supreme Cão Adulto"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a href="Pages/infoProduto.html">
+                        <div class="img-container">
+                            <img src="imagens/racao-special-dog.png" alt="Pacote de ração Quatree Supreme Cão Adulto" loading="lazy" decoding="async">
+                        </div>
+                        <p class="produto-titulo">Quatree Supreme Cão Adulto Méd/Gran Frango ...</p>
+                        <p class="produto-preco">R$196</p>
+                    </a>
+                </div>
+
+                <div class="card-produto" id="produto2">
+                    <a href="Pages/carrinho.html" class="btn-carrinho-card" aria-label="Adicionar ao carrinho: Coleira para cachorro"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a href="Pages/infoProduto.html">
+                        <div class="img-container">
+                            <img src="imagens/coleira-vermelha.png" alt="Coleira vermelha para cachorro" loading="lazy" decoding="async">
+                        </div>
+                        <p class="produto-titulo">Coleira para cachorro porte medio vermelha</p>
+                        <p class="produto-preco">R$67,00</p>
+                    </a>
+                </div>
+
+                <div class="card-produto" id="produto3">
+                    <a href="Pages/carrinho.html" class="btn-carrinho-card" aria-label="Adicionar ao carrinho: Brinquedo frango sonoro"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a href="Pages/infoProduto.html">
+                        <div class="img-container">
+                            <img src="imagens/frango-borracha.png" alt="Brinquedo de borracha em formato de frango amarelo" loading="lazy" decoding="async">
+                        </div>
+                        <p class="produto-titulo">Brinquedo de cachorro frango sonoro gritador pequeno</p>
+                        <p class="produto-preco">R$16,00</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <button type="button" class="seta-carrossel seta-direita" aria-label="Próximos produtos">&#10095;</button>
+        </div>
+    </section>
+</main>
+
+<!-- Faixa decorativa: mesma imagem usada nos dois cantos (esquerda girada, direita espelhada) -->
+<div class="faixa-plantas" aria-hidden="true">
+    <img src="imagens/endPlant.png" alt="" class="planta planta-esq" loading="lazy" decoding="async">
+    <img src="imagens/endPlant.png" alt="" class="planta planta-dir" loading="lazy" decoding="async">
+</div>
 
 <!-- Rodapé -->
-<section id="cominicacao">
-    <footer class="endPage">
-        <div class="footer-coluna footer-brand">
-            <!-- IMAGEM: logo da Minac no rodapé -->
-            <img src="imagens/logoMinac.png" alt="Logo Minac" class="footer-logo">
-            <div class="redes-sociais">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
+<footer class="endPage" id="cominicacao">
+    <div class="footer-coluna footer-brand">
+        <img src="imagens/logoMinac.png" alt="Logo Minac" class="footer-logo" loading="lazy" decoding="async">
+        <div class="redes-sociais">
+            <a href="#" aria-label="Instagram da Minac"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Facebook da Minac"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube da Minac"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn da Minac"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok da Minac"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-coluna">
+        <h3>A empresa</h3>
+        <ul>
+            <li><a href="#">Conheça o Minac</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-coluna">
+        <h3>Políticas</h3>
+        <ul>
+            <li><a href="#termosUso" class="abrir-termos">Termos de uso</a></li>
+            <li><a href="#">Trocas e devoluções</a></li>
+            <li><a href="#">FAQ lojas físicas</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Privacidade</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-coluna">
+        <h3>Campanhas e promoções</h3>
+        <ul>
+            <li><a href="#">Campanhas vigentes</a></li>
+            <li><a href="#">Campanhas encerradas</a></li>
+            <li><a href="#">Cupons</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-coluna footer-pagamento">
+        <h3>Formas de pagamento</h3>
+        <div class="bandeiras-pagamento">
+
+            <img src="imagens/Elo_logo.png" alt="Elo" loading="lazy" decoding="async">
+            <img src="imagens/diners.jpg" alt="Diners" loading="lazy" decoding="async">
+
+            <img src="imagens/amex.jpg" alt="Amex" loading="lazy" decoding="async">
+
+        </div>
+        <div class="selos-seguranca">
+            <img src="imagens/reclame-aqui.webp" alt="Ótimo - Reclame Aqui" class="selo-reclameaqui" loading="lazy" decoding="async">
+            <img src="imagens/melhores-empresas.svg" alt="Melhores Empresas 2026" class="selo-premio" loading="lazy" decoding="async">
+        </div>
+    </div>
+</footer>
+
+<!-- Termos de uso: aparece na primeira visita e só libera o site depois que o cliente concorda -->
+<div id="termosUso" class="termos-overlay" role="dialog" aria-modal="true" aria-labelledby="termosTitulo" hidden>
+    <div class="termos-caixa">
+        <h2 id="termosTitulo">Termos de uso</h2>
+
+        <div class="termos-texto" tabindex="0">
+            <p>Bem-vindo à Minac! Para usar a loja, leia e aceite os termos abaixo.</p>
+
+            <h3>1. Uso da loja</h3>
+            <p>A Minac é uma loja virtual de produtos para pets. Ao navegar e comprar, você declara ter 18 anos ou mais, ou estar acompanhado de um responsável legal.</p>
+
+            <h3>2. Cadastro e dados</h3>
+            <p>As informações informadas (nome, CPF, CEP e dados de pagamento) devem ser verdadeiras e são usadas apenas para processar seu pedido e a entrega, conforme a Lei Geral de Proteção de Dados (LGPD).</p>
+
+            <h3>3. Preços e pagamento</h3>
+            <p>Os preços e as promoções podem mudar sem aviso prévio. O pedido só é confirmado depois da aprovação do pagamento.</p>
+
+            <h3>4. Entrega, trocas e devoluções</h3>
+            <p>Os prazos de entrega são estimativas. Você pode pedir troca ou devolução em até 7 dias após o recebimento, conforme o Código de Defesa do Consumidor.</p>
+
+            <h3>5. Responsabilidades</h3>
+            <p>Use os produtos conforme as instruções do fabricante. A Minac não se responsabiliza pelo uso indevido dos produtos.</p>
+
+            <h3>6. Alterações</h3>
+            <p>Estes termos podem ser atualizados. Quando isso acontecer, vamos pedir que você aceite novamente.</p>
         </div>
 
-        <div class="footer-coluna">
-            <h3>A empresa</h3>
-            <ul>
-                <li><a href="#">Conheça o Minac</a></li>
-            </ul>
+        <label class="termos-aceite">
+            <input type="checkbox" id="termosCheck">
+            <span>Li e concordo com os Termos de uso da Minac.</span>
+        </label>
+
+        <div class="termos-acoes">
+            <button type="button" id="termosAceitar" class="btn-termos" disabled>Aceitar e continuar</button>
+            <button type="button" id="termosRecusar" class="btn-termos btn-termos-sec">Não concordo</button>
         </div>
 
-        <div class="footer-coluna">
-            <h3>Políticas</h3>
-            <ul>
-                <li><a href="#">Termos e condições</a></li>
-                <li><a href="#">Trocas e devoluções</a></li>
-                <li><a href="#">FAQ lojas físicas</a></li>
-                <li><a href="#">Cookies</a></li>
-                <li><a href="#">Privacidade</a></li>
-            </ul>
-        </div>
+        <p id="termosAviso" class="termos-aviso" role="alert" hidden>Sem aceitar os termos não é possível usar a loja. Marque a caixa acima quando estiver de acordo.</p>
+    </div>
+</div>
 
-        <div class="footer-coluna">
-            <h3>Campanhas e promoções</h3>
-            <ul>
-                <li><a href="#">Campanhas vigentes</a></li>
-                <li><a href="#">Campanhas encerradas</a></li>
-                <li><a href="#">Cupons</a></li>
-            </ul>
-        </div>
+<script>
+    /* ---------- Carrossel de destaques ---------- */
+    (function () {
+        var lista = document.getElementById("listaDestaques");
+        var esq = document.querySelector(".seta-esquerda");
+        var dir = document.querySelector(".seta-direita");
 
-        <div class="footer-coluna footer-pagamento">
-            <h3>Formas de pagamento</h3>
-            <!-- IMAGENS: logos das bandeiras/meios de pagamento aceitos -->
-            <div class="bandeiras-pagamento">
-                <img src="imagens/visa.png" alt="Visa">
-                <img src="imagens/mastercard.png" alt="Mastercard">
-                <img src="imagens/elo.png" alt="Elo">
-                <img src="imagens/diners.png" alt="Diners">
-                <img src="imagens/hipercard.png" alt="Hipercard">
-                <img src="imagens/amex.png" alt="Amex">
-                <img src="imagens/boleto.png" alt="Boleto">
-                <img src="imagens/pix.png" alt="Pix">
-            </div>
-            <div class="selos-seguranca">
-                <!-- IMAGEM: selo "Ótimo" do Reclame Aqui -->
-                <img src="imagens/reclame-aqui.png" alt="Ótimo Reclame Aqui" class="selo-reclameaqui">
-                <!-- IMAGEM: selo prêmio Melhores Empresas 2026 -->
-                <img src="imagens/melhores-empresas.png" alt="Melhores Empresas 2026" class="selo-premio">
-            </div>
-        </div>
-    </footer>
-</section>
+        function passo() {
+            var card = lista.querySelector(".card-produto");
+            var gap = parseFloat(getComputedStyle(lista).columnGap) || 0;
+            return card.offsetWidth + gap;
+        }
+
+        function atualizar() {
+            var max = lista.scrollWidth - lista.clientWidth;
+            esq.disabled = lista.scrollLeft <= 1;
+            dir.disabled = lista.scrollLeft >= max - 1;
+        }
+
+        esq.addEventListener("click", function () { lista.scrollBy({ left: -passo(), behavior: "smooth" }); });
+        dir.addEventListener("click", function () { lista.scrollBy({ left: passo(), behavior: "smooth" }); });
+        lista.addEventListener("scroll", atualizar, { passive: true });
+        window.addEventListener("resize", atualizar);
+        atualizar();
+    })();
+
+    /* ---------- Termos de uso ---------- */
+    (function () {
+        var VERSAO = "1"; // mude para "2" se atualizar os termos: todo mundo precisa aceitar de novo
+        var CHAVE = "minacTermosAceitos";
+
+        var modal = document.getElementById("termosUso");
+        var check = document.getElementById("termosCheck");
+        var aceitar = document.getElementById("termosAceitar");
+        var recusar = document.getElementById("termosRecusar");
+        var aviso = document.getElementById("termosAviso");
+        var fora = document.querySelectorAll("body > :not(#termosUso):not(script)");
+        var reaberto = false;
+        var ultimoFoco = null;
+
+        function jaAceitou() {
+            try { return localStorage.getItem(CHAVE) === VERSAO; } catch (e) { return false; }
+        }
+
+        // trava o resto da página (mouse e teclado) enquanto o aviso está aberto
+        function bloquear(on) {
+            for (var i = 0; i < fora.length; i++) fora[i].inert = on;
+        }
+
+        function abrir() {
+            reaberto = jaAceitou();
+            ultimoFoco = document.activeElement;
+            // quem já aceitou só relê os termos: pode fechar sem aceitar de novo
+            check.checked = reaberto;
+            aceitar.disabled = !reaberto;
+            aceitar.textContent = reaberto ? "Fechar" : "Aceitar e continuar";
+            recusar.hidden = reaberto;
+            aviso.hidden = true;
+            modal.hidden = false;
+            bloquear(true);
+            document.body.classList.add("termos-aberto");
+            (reaberto ? aceitar : check).focus();
+        }
+
+        function fechar() {
+            modal.hidden = true;
+            bloquear(false);
+            document.body.classList.remove("termos-aberto");
+            if (ultimoFoco && ultimoFoco.focus) ultimoFoco.focus();
+        }
+
+        check.addEventListener("change", function () {
+            aceitar.disabled = !check.checked;
+            if (check.checked) aviso.hidden = true;
+        });
+
+        aceitar.addEventListener("click", function () {
+            if (!check.checked) return;
+            try { localStorage.setItem(CHAVE, VERSAO); } catch (e) {}
+            fechar();
+        });
+
+        recusar.addEventListener("click", function () {
+            aviso.hidden = false;
+        });
+
+        // Esc só fecha quando a pessoa já tinha aceitado antes
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !modal.hidden && reaberto) fechar();
+        });
+
+        // link "Termos de uso" no rodapé reabre o aviso
+        var links = document.querySelectorAll(".abrir-termos");
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function (e) { e.preventDefault(); abrir(); });
+        }
+
+        if (!jaAceitou()) abrir();
+    })();
+</script>
 
 </body>
 </html>
