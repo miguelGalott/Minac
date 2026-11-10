@@ -1,0 +1,204 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Ração Seca Cães Adultos Frango 10kg",
+      "categoria": "Ração",
+      "preco": 139.9,
+      "descricao": "Ração completa para cães adultos, sabor frango e arroz.",
+      "imagem": "https://placehold.co/400x400?text=Produto+1",
+      "estoque": 23,
+      "destaque": true
+    },
+    {
+      "id": 2,
+      "nome": "Ração Seca Cães Filhotes 3kg",
+      "categoria": "Ração",
+      "preco": 64.9,
+      "descricao": "Ração para filhotes com DHA para o desenvolvimento.",
+      "imagem": "https://placehold.co/400x400?text=Produto+2",
+      "estoque": 26,
+      "destaque": false
+    },
+    {
+      "id": 3,
+      "nome": "Ração Seca Gatos Adultos Salmão 3kg",
+      "categoria": "Ração",
+      "preco": 72.5,
+      "descricao": "Ração para gatos adultos castrados, sabor salmão.",
+      "imagem": "https://placehold.co/400x400?text=Produto+3",
+      "estoque": 29,
+      "destaque": true
+    },
+    {
+      "id": 4,
+      "nome": "Ração Úmida Sachê Gatos 85g",
+      "categoria": "Ração",
+      "preco": 3.99,
+      "descricao": "Sachê de alimento úmido para gatos, sabor carne.",
+      "imagem": "https://placehold.co/400x400?text=Produto+4",
+      "estoque": 32,
+      "destaque": false
+    },
+    {
+      "id": 5,
+      "nome": "Petisco Bifinho Cães 500g",
+      "categoria": "Petiscos",
+      "preco": 24.9,
+      "descricao": "Petisco macio sabor carne para cães de todos os portes.",
+      "imagem": "https://placehold.co/400x400?text=Produto+5",
+      "estoque": 35,
+      "destaque": false
+    },
+    {
+      "id": 6,
+      "nome": "Osso de Couro Cães",
+      "categoria": "Petiscos",
+      "preco": 9.9,
+      "descricao": "Osso de couro prensado para roer e limpar os dentes.",
+      "imagem": "https://placehold.co/400x400?text=Produto+6",
+      "estoque": 38,
+      "destaque": false
+    },
+    {
+      "id": 7,
+      "nome": "Bolinha de Borracha com Apito",
+      "categoria": "Brinquedos",
+      "preco": 14.9,
+      "descricao": "Bolinha resistente para brincar de buscar.",
+      "imagem": "https://placehold.co/400x400?text=Produto+7",
+      "estoque": 41,
+      "destaque": true
+    },
+    {
+      "id": 8,
+      "nome": "Corda de Algodão para Cães",
+      "categoria": "Brinquedos",
+      "preco": 19.9,
+      "descricao": "Brinquedo de corda para cabo de guerra.",
+      "imagem": "https://placehold.co/400x400?text=Produto+8",
+      "estoque": 44,
+      "destaque": false
+    },
+    {
+      "id": 9,
+      "nome": "Arranhador para Gatos Torre",
+      "categoria": "Brinquedos",
+      "preco": 129.0,
+      "descricao": "Torre arranhador com plataforma e bolinha.",
+      "imagem": "https://placehold.co/400x400?text=Produto+9",
+      "estoque": 47,
+      "destaque": false
+    },
+    {
+      "id": 10,
+      "nome": "Varinha com Penas para Gatos",
+      "categoria": "Brinquedos",
+      "preco": 12.9,
+      "descricao": "Brinquedo interativo com penas coloridas.",
+      "imagem": "https://placehold.co/400x400?text=Produto+10",
+      "estoque": 50,
+      "destaque": false
+    },
+    {
+      "id": 11,
+      "nome": "Coleira Nylon Ajustável M",
+      "categoria": "Acessórios",
+      "preco": 29.9,
+      "descricao": "Coleira de nylon ajustável, tamanho médio.",
+      "imagem": "https://placehold.co/400x400?text=Produto+11",
+      "estoque": 53,
+      "destaque": false
+    },
+    {
+      "id": 12,
+      "nome": "Peitoral com Guia P",
+      "categoria": "Acessórios",
+      "preco": 49.9,
+      "descricao": "Peitoral acolchoado com guia, tamanho pequeno.",
+      "imagem": "https://placehold.co/400x400?text=Produto+12",
+      "estoque": 56,
+      "destaque": true
+    },
+    {
+      "id": 13,
+      "nome": "Comedouro Inox Antiderrapante",
+      "categoria": "Acessórios",
+      "preco": 22.9,
+      "descricao": "Comedouro de aço inox com base de borracha.",
+      "imagem": "https://placehold.co/400x400?text=Produto+13",
+      "estoque": 59,
+      "destaque": false
+    },
+    {
+      "id": 14,
+      "nome": "Bebedouro Fonte Automático 2L",
+      "categoria": "Acessórios",
+      "preco": 99.9,
+      "descricao": "Fonte de água circulante para cães e gatos.",
+      "imagem": "https://placehold.co/400x400?text=Produto+14",
+      "estoque": 62,
+      "destaque": false
+    },
+    {
+      "id": 15,
+      "nome": "Caminha Pet Confort M",
+      "categoria": "Camas",
+      "preco": 89.9,
+      "descricao": "Caminha macia e lavável para cães e gatos.",
+      "imagem": "https://placehold.co/400x400?text=Produto+15",
+      "estoque": 65,
+      "destaque": true
+    },
+    {
+      "id": 16,
+      "nome": "Caixa de Transporte N3",
+      "categoria": "Transporte",
+      "preco": 119.9,
+      "descricao": "Caixa de transporte resistente com trava de segurança.",
+      "imagem": "https://placehold.co/400x400?text=Produto+16",
+      "estoque": 68,
+      "destaque": false
+    },
+    {
+      "id": 17,
+      "nome": "Areia Higiênica Gatos 4kg",
+      "categoria": "Higiene",
+      "preco": 21.9,
+      "descricao": "Areia sanitária com controle de odor.",
+      "imagem": "https://placehold.co/400x400?text=Produto+17",
+      "estoque": 71,
+      "destaque": false
+    },
+    {
+      "id": 18,
+      "nome": "Shampoo Neutro Pet 500ml",
+      "categoria": "Higiene",
+      "preco": 27.9,
+      "descricao": "Shampoo neutro para banho de cães e gatos.",
+      "imagem": "https://placehold.co/400x400?text=Produto+18",
+      "estoque": 74,
+      "destaque": false
+    },
+    {
+      "id": 19,
+      "nome": "Tapete Higiênico 30 unidades",
+      "categoria": "Higiene",
+      "preco": 54.9,
+      "descricao": "Tapete absorvente para treinar cães.",
+      "imagem": "https://placehold.co/400x400?text=Produto+19",
+      "estoque": 77,
+      "destaque": false
+    },
+    {
+      "id": 20,
+      "nome": "Antipulgas Cães 10 a 25kg",
+      "categoria": "Saúde",
+      "preco": 79.9,
+      "descricao": "Comprimido antipulgas e carrapatos de uso mensal.",
+      "imagem": "https://placehold.co/400x400?text=Produto+20",
+      "estoque": 80,
+      "destaque": false
+    }
+  ]
+}

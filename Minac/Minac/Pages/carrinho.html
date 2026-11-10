@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compra - Minac</title>
+  
+    <link rel="stylesheet" href="Css/geral.css">
+</head>
+<body>
+>
+    <header id="topoDiv">
+        <img id="logoTopoDiv" src="imagens/voltar.png" alt="Voltar">
+
+        <div class="carrinho-container">
+            <img id="carrinhoTopo" src="imagens/carrinhoMinac.png" alt="Carrinho">
+            <span>Carrinho</span>
+        </div> 
+
+        <div class="topo-pesquisa-voltar">
+            <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Digite um item para seu Pet">
+        </div>
+    </header>
+
+
+    <main class="produto-container">
+
+        <div class="separar"></div>
+
+
+        <div class="barra-informativa">
+            <h2><b>Produtos adicionados</b></h2>
+            <h2><b>Quantidade</b></h2>
+            <h2><b>Preço total</b></h2>
+        </div>
+
+        <div class="carrinho-produtos">
+
+            <div class="item-carrinho">
+                <input type="checkbox" name="checkProduto" class="check-item">
+                <img src="imagens/fotoPadraoProduto.png" alt="Coleira para cachorro" class="foto-carrinho">
+                
+                <div class="info-produto">
+                    <p class="nome-produto">Coleira para cachorro porte medio vermelha</p>
+                    <span class="preco-unitario">R$60,99</span>
+                </div>
+
+                <div class="controle-quantidade">
+                    <button type="button" class="btn-qtd">+</button>
+                    <span class="qtd-numero">2</span>
+                    <button type="button" class="btn-qtd">-</button>
+                </div>
+
+                <div class="preco-subtotal">
+                    <span>R$122,00</span>
+                </div>
+            </div>
+
+
+            <div class="item-carrinho">
+                <input type="checkbox" name="checkProduto" class="check-item">
+                <img src="imagens/fotoPadraoProduto.png" alt="Ração Quatree" class="foto-carrinho">
+                
+                <div class="info-produto">
+                    <p class="nome-produto">Quatree Supreme Cão Adulto Méd/Gran Frango...</p>
+                    <span class="preco-unitario">R$196,00</span>
+                </div>
+
+                <div class="controle-quantidade">
+                    <button type="button" class="btn-qtd">+</button>
+                    <span class="qtd-numero">1</span>
+                    <button type="button" class="btn-qtd">-</button>
+                </div>
+
+                <div class="preco-subtotal">
+                    <span>R$196,00</span>
+                </div>
+            </div>
+
+
+            <div class="item-carrinho">
+                <input type="checkbox" name="checkProduto" class="check-item" checked>
+                <img src="imagens/fotoPadraoProduto.png" alt="Brinquedo Frango" class="foto-carrinho">
+                
+                <div class="info-produto">
+                    <p class="nome-produto">Brinquedo de cachorro frango sonoro gritador pequeno</p>
+                    <span class="preco-unitario">R$16,00</span>
+                </div>
+
+                <div class="controle-quantidade">
+                    <button type="button" class="btn-qtd">+</button>
+                    <span class="qtd-numero">3</span>
+                    <button type="button" class="btn-qtd">-</button>
+                </div>
+
+                <div class="preco-subtotal">
+                    <span>R$48,00</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="rodape-carrinho">
+            <div class="selecionar-todos">
+                <input type="checkbox" id="selecionarTudo">
+                <label for="selecionarTudo">Selecionar Tudo</label>
+                <button type="button" class="btn-remover-selecionados">X</button>
+            </div>
+
+            <div class="resumo-final">
+                <span class="total-texto">Total (3 item) <strong>R$48,00</strong></span>
+                <button type="button" class="btn-finalizar-compra">✓</button>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
