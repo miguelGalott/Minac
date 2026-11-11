@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minac Produto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/geral.css">
+</head>
+<body>
+
+    <!-- Header / Topo -->
+    <header id="topoDiv">
+        <a href="../index.html" class="link-voltar">
+            <img id="logoTopoDiv" src="../imagens/voltar.png" alt="Voltar Minac">
+        </a>
+
+        <div class="topo-pesquisa">
+            <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="">
+            <span class="icone-novelo">🧶</span>
+        </div>
+
+        <a href="carrinho.html" class="carrinho-container">
+            <img id="carrinhoTopo" src="../imagens/carrinho.png" alt="Carrinho">
+            <span>Carrinho</span>
+        </a>
+    </header>
+
+    <!-- Conteúdo Principal do Produto -->
+    <main class="produto-pagina">
+
+        <!-- Lado Esquerdo: Imagem Decorativa + Galeria + Imagem Principal + Botão -->
+        <div class="coluna-esquerda">
+            <!-- Imagem decorativa no canto inferior esquerdo -->
+            <img src="../imagens/cachorro-lateral.png" alt="" class="img-decorativa-cachorro">
+
+            <section id="fotosImagens">
+                <div class="miniaturas-galeria">
+                    <div class="miniatura ativa"><img src="../imagens/thumb1.png" alt="Thumb 1"></div>
+                    <div class="miniatura miniatura-video"><img src="../imagens/thumb2.png" alt="Thumb 2"></div>
+                    <div class="miniatura"><img src="../imagens/thumb3.png" alt="Thumb 3"></div>
+                    <div class="miniatura"><img src="../imagens/thumb4.png" alt="Thumb 4"></div>
+                    <div class="miniatura"><img src="../imagens/thumb5.png" alt="Thumb 5"></div>
+                </div>
+
+                <div class="foto-principal">
+                    <img src="../imagens/fotoPadraoProduto.png" alt="Peitoral Antipuxão" id="fotoDeComplemento">
+                </div>
+            </section>
+
+            <!-- Botão Adicionar (Formato Osso) -->
+            <div class="container-btn-adicionar">
+                <a href="carrinho.html" id="btnConfirmar" class="btn-osso">
+                    <span>Adicionar</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Lado Direito: Detalhes do Produto (Card Amarelo) -->
+        <aside class="detalhes-produto-card">
+            <button type="button" class="btn-favorito" aria-label="Favoritar">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+            </button>
+
+            <h1 id="titulo">Peitoral Antipuxão Cachorro Antifuga Guia Cinto Carro Nylon</h1>
+
+            <div class="precos">
+                <span id="price">R$67,00</span>
+                <span id="desconto">38% OFF</span>
+            </div>
+
+            <hr class="divisor-suave">
+
+            <div class="frete-info">
+                <p><strong>Chegará entre segunda-feira e quarta-feira grátis</strong></p>
+                <p class="desconto-entrega"><span class="preco-riscado">R$17,70</span> <span class="destaque-verde">R$0</span> por ser sua primeira compra</p>
+                <p class="links-detalhes"><a href="#">Mais detalhes e formas de entrega</a></p>
+                <p><strong>Retire entre terça-feira e quarta-feira em uma agência Mercado Livre grátis</strong> <span class="preco-riscado">R$17,70</span> <span class="destaque-verde">R$0</span></p>
+            </div>
+
+            <hr class="divisor-suave">
+
+            <div class="opcao-tamanho">
+                <p><strong>Tamanho Da Coleira: P</strong></p>
+            </div>
+        </aside>
+
+    </main>
+
+</body>
+</html>
