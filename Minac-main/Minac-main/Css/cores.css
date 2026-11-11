@@ -1,0 +1,15 @@
+/* Paleta única do site Minac. Carregue ANTES do geral.css em todas as páginas. */
+:root {
+    --amarelo-topo: #FFF9CC;
+    --creme-fundo: #FFFFF3;
+    --laranja-categorias: #FFCC80;
+    --bege-card: #F0DFC3;
+    --creme-campo: #FFF0D9;
+    --cinza-rodape: #E0E0E0;
+    --verde-check: #9ED39A;
+    --texto-suave: #6b624f;
+    --preto: #000;
+
+    --raio-card: 30px;
+    --raio-campo: 16px;
+}
