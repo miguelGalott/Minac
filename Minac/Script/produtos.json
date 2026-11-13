@@ -6,6 +6,7 @@
     "price": 18900000.90,
     "category": "Brinquedos",
     "animal": "cachorro",
+    "promocoes": "false",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoVScuC7bMuJnw8JxzTExm3JumUbuodDzGuWdLp3U7OA&s=10"
   },
   {
@@ -13,7 +14,8 @@
     "title": "Ração Premium Cães Adultos Frango e Arroz 15kg",
     "price": 189.90,
     "category": "Rações",
-    "animal": "gato",
+    "animal": "gatos",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -21,7 +23,8 @@
     "title": "Arranhador Torre para Gatos com Playground",
     "price": 249.90,
     "category": "Brinquedos",
-    "animal": "gato",
+    "animal": "gatos",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -30,14 +33,16 @@
     "price": 79.90,
     "category": "Acessórios",
     "animal": "geral",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&auto=format&fit=crop&q=60"
   },
   {
     "id": 5,
-    "title": "Shampoo Neutro para Cães e Gatos 500ml",
+    "title": "Shampoo Neutro para Cães e gatos 500ml",
     "price": 34.90,
     "category": "Higiene",
-    "animal": "gato",
+    "animal": "gatos",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -46,6 +51,7 @@
     "price": 29.90,
     "category": "Brinquedos",
     "animal": "passaros",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -54,6 +60,7 @@
     "price": 139.90,
     "category": "Acessórios",
     "animal": "geral",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -61,7 +68,8 @@
     "title": "Petisco Snacks Saudáveis para Gatos Sabores 50g",
     "price": 12.50,
     "category": "Petiscos",
-    "animal": "gato",
+    "animal": "gatos",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -70,6 +78,7 @@
     "price": 119.90,
     "category": "Acessórios",
     "animal": "geral",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -78,6 +87,7 @@
     "price": 95.00,
     "category": "Acessórios",
     "animal": "passaros",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -85,7 +95,8 @@
     "title": "Areia Sanitária Silica Premium para Gatos 1,6kg",
     "price": 54.90,
     "category": "Higiene",
-    "animal": "gato",
+    "animal": "gatos",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -94,6 +105,7 @@
     "price": 239.90,
     "category": "Remédios",
     "animal": "cachorro",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -102,6 +114,7 @@
     "price": 89.90,
     "category": "Remédios",
     "animal": "cachorro",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -110,6 +123,7 @@
     "price": 45.00,
     "category": "Brinquedos",
     "animal": "geral",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -118,6 +132,7 @@
     "price": 19.90,
     "category": "Petiscos",
     "animal": "cachorro",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1608474845026-9b552e3e5f1d?w=500&auto=format&fit=crop&q=60"
   },
   {
@@ -125,7 +140,8 @@
     "title": "Vitamina Suplemento Nutricional em Pasta para Gatos",
     "price": 62.00,
     "category": "Remédios",
-    "animal": "gato",
+    "animal": "gatos",
+    "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=500&auto=format&fit=crop&q=60"
   }
 ]
