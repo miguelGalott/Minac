@@ -641,8 +641,17 @@ body.termos-aberto { overflow: hidden; }
 @media (max-width: 900px) {
     #topoDiv { padding: 10px 20px; flex-wrap: wrap; }
     .banners-grid { flex-direction: column; gap: 24px; padding: 24px 20px; }
-    .lista-produtos { justify-content: flex-start; }
-    .carrossel-container { padding: 30px 20px; }
+    .lista-produtos {display: flex;
+    gap: 16px;    overflow-x: auto; scroll-behavior: smooth;          scroll-snap-type: x mandatory;    scrollbar-width: none;    -webkit-overflow-scrolling: touch;}
+    
+    .lista-produtos::-webkit-scrollbar {display: none;                 }
+    
+    .carrossel-container { position: relative; }
+
+.card-produto {
+    flex: 0 0 auto;                   
+    width: 220px;             scroll-snap-align: start;}
+
     .endPage { padding: 24px 20px; }
 
     /* plantas */
