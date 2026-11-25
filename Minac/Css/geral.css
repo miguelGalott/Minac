@@ -992,3 +992,34 @@ body.termos-aberto { overflow: hidden; }
     margin-bottom: -15px;
     color: #333;
 }
+
+/* ===================== PÁGINAS INFORMATIVAS (texto simples) ===================== */
+.topo-simples h1 { font-size: 1.6rem; font-weight: normal; flex: 1; }
+
+.pagina-info {
+    max-width: 800px;
+    margin: 30px auto 60px;
+    padding: 28px 32px;
+    background: var(--amarelo-topo);
+    border: 3px solid var(--preto);
+    border-radius: 28px;
+    line-height: 1.6;
+}
+
+.pagina-info h2 { font-size: 1.15rem; font-weight: normal; margin: 18px 0 6px; }
+.pagina-info h2:first-child { margin-top: 0; }
+.pagina-info ul { padding-left: 22px; }
+.pagina-info a { text-decoration: underline; color: #1a4fa3; }
+.pagina-info .aviso-exemplo { margin-top: 20px; font-size: 0.85rem; color: #777; }
+
+.lista-campanhas { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.lista-campanhas li {
+    padding: 14px 20px;
+    background: var(--bege-card);
+    border-radius: 20px;
+}
+.lista-campanhas strong { display: block; }
+
+@media (max-width: 900px) {
+    .pagina-info { margin: 20px 16px 40px; padding: 22px 20px; }
+}
