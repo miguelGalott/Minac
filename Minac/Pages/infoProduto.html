@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Minac Shop</title>
+    <link rel="icon" href="../imagens/logoMinac.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/cores.css">
+    <link rel="stylesheet" href="../Css/geral.css">
+</head>
+<body>
+
+<header id="topoDiv">
+    <a href="../index.html" class="btn-voltar" aria-label="Voltar para a página inicial">&#10094;</a>
+
+    <div class="topo-pesquisa" role="search">
+        <label for="barraPesquisa" class="visually-hidden">Pesquisar produtos</label>
+        <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Digite um item para seu Pet">
+        <span class="icone-pesquisa" aria-hidden="true">🧶</span>
+    </div>
+
+    <a href="carrinho.html" class="carrinho-container">
+        <img id="carrinhoTopo" src="../imagens/carrinho.png" alt="">
+        <span>Carrinho</span>
+    </a>
+</header>
+
+<main class="produto-pagina">
+
+    <div class="coluna-esquerda">
+        <section id="fotosImagens">
+            <div class="foto-principal">
+                <img src="../imagens/logoMinac.png" alt="Carregando produto" id="fotoDeComplemento">
+            </div>
+        </section>
+
+        <div class="container-btn-adicionar">
+            <a href="carrinho.html" id="btnConfirmar" class="btn-osso" role="button" aria-expanded="false" aria-controls="painelQuantidade">Adicionar</a>
+
+            <div id="painelQuantidade" class="painel-quantidade" inert>
+                <div class="painel-conteudo">
+                    <div class="painel-caixa">
+                        <p class="painel-titulo">Quantidade</p>
+
+                        <div class="seletor-quantidade">
+                            <button type="button" id="quantidadeMenos" aria-label="Diminuir quantidade">&minus;</button>
+                            <span id="quantidadeValor" aria-live="polite">1</span>
+                            <button type="button" id="quantidadeMais" aria-label="Aumentar quantidade">+</button>
+                        </div>
+
+                        <button type="button" id="colocarNoCarrinho" class="btn-colocar-carrinho">Colocar no carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <p id="avisoCarrinho" class="aviso-carrinho" role="status"></p>
+        </div>
+    </div>
+
+    <aside class="detalhes-produto-card">
+        <button type="button" class="btn-favorito" aria-label="Favoritar">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+        </button>
+
+        <h1 id="titulo">Carregando...</h1>
+
+        <div class="precos">
+            <span id="price">R$ 0,00</span>
+            <span id="precoAntigo" class="preco-riscado" hidden></span>
+            <span id="desconto" hidden></span>
+        </div>
+
+        <hr class="divisor-suave">
+
+        <p id="descricao"></p>
+
+        <hr class="divisor-suave">
+
+        <div class="frete-info">
+            <p class="links-detalhes"><a href="#">Mais detalhes e formas de entrega</a></p>
+        </div>
+    </aside>
+
+</main>
+
+<script type="module" src="../Script/infoProduto.js"></script>
+<script type="module" src="../Script/adicionar.js"></script>
+</body>
+</html>

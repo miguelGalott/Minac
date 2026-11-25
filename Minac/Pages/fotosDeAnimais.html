@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Minac Shop</title>
+    <link rel="icon" href="../imagens/logoMinac.png">
+    <link rel="stylesheet" href="../Css/geral.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="menuToggle" aria-label="Abrir ou fechar o menu">
+
+<header id="topoDiv">
+    <a href="../index.html" class="btn-voltar" aria-label="Voltar para a página inicial">&#10094;</a>
+
+    <div class="topo-pesquisa" role="search">
+        <label for="barraPesquisa" class="visually-hidden">Pesquisar na galeria</label>
+        <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Pesquise uma raça (ex: husky)">
+        <span class="icone-pesquisa" aria-hidden="true">🧶</span>
+    </div>
+
+    <div class="topo-acoes">
+        <a href="carrinho.html" class="item-acao">
+            <img id="carrinhoTopo" src="../imagens/carrinho.png" alt="">
+            <span>Carrinho</span>
+        </a>
+        <label for="menuToggle" class="menu-btn">
+            <span class="hamburguer" aria-hidden="true"><span></span><span></span><span></span></span>
+            <small>mais</small>
+        </label>
+    </div>
+</header>
+
+<label for="menuToggle" class="sidebar-fundo" aria-hidden="true"></label>
+
+<aside class="sidebar">
+    <label for="menuToggle" class="close-btn" aria-label="Fechar menu">×</label>
+    <nav aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="usuario.html">Configurações</a>
+    </nav>
+</aside>
+
+<main>
+    <div class="titulo-secao"><h1>Galeria</h1></div>
+
+    <section id="galeria-container" class="galeria" aria-label="Fotos de pets"></section>
+
+    <div class="galeria-acoes">
+        <button type="button" id="btnMais" class="btn-termos">Carregar mais fotos</button>
+    </div>
+</main>
+
+<script type="module" src="../Script/galeria.js"></script>
+</body>
+</html>

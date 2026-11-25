@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compra - Minac</title>
+    <link rel="icon" href="../imagens/logoMinac.png">
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/cores.css">
+    <link rel="stylesheet" href="../Css/geral.css">
+</head>
+<body>
+
+    <header id="topoDiv">
+        <a href="../index.html"><img id="logoTopoDiv" src="../imagens/voltar.png" alt="Voltar para a loja"></a>
+
+        <div class="carrinho-container">
+            <img id="carrinhoTopo" src="../imagens/carrinhoMinac.png" alt="Carrinho">
+            <span class="visually-hidden">Carrinho</span>
+        </div>
+
+        <div class="topo-pesquisa-voltar" role="search">
+            <label for="barraPesquisa" class="visually-hidden">Pesquisar produtos</label>
+            <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Digite um item para seu Pet">
+            <span class="icone-pesquisa" aria-hidden="true">🧶</span>
+        </div>
+    </header>
+
+    <main class="produto-container">
+
+        <div class="separar"></div>
+
+        <div class="barra-informativa">
+            <h2>Produtos adicionados</h2>
+            <h2>Quantidade</h2>
+            <h2>Preço total</h2>
+        </div>
+
+        <div class="carrinho-produtos">
+            <p>Carregando carrinho...</p>
+        </div>
+
+        <footer class="rodape-carrinho">
+            <div class="selecionar-todos">
+                <input type="checkbox" id="selecionarTudo">
+                <label for="selecionarTudo">Selecionar tudo</label>
+                <button type="button" class="btn-remover-selecionados" aria-label="Remover itens selecionados" disabled>&#10005;</button>
+            </div>
+
+            <div class="resumo-final">
+                <span class="total-texto">Total (0 itens) <strong>R$ 0,00</strong></span>
+                <a href="preencherInfo.html" class="btn-finalizar-compra desativado" aria-label="Finalizar compra" aria-disabled="true">&#10003;</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script type="module" src="../Script/paginaCarrinho.js"></script>
+</body>
+</html>

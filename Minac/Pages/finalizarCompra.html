@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra finalizada - Minac</title>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/cores.css">
+    <link rel="stylesheet" href="../Css/geral.css">
+    <link rel="stylesheet" href="../Css/paginas.css">
+</head>
+<body>
+
+    <input type="checkbox" id="menuToggle" aria-hidden="true">
+
+    <header id="topoDiv">
+      
+        <a href="preencherInfo.html"><img id="logoTopoDiv" src="../imagens/voltar.png" alt="Voltar para preencher informações"></a>
+
+        <h1 class="titulo-pagina">Finalizar compra</h1>
+
+        <label for="menuToggle" class="menu-btn">
+            <span class="hamburguer"><span></span><span></span><span></span></span>
+            <small>mais</small>
+        </label>
+    </header>
+
+    <aside class="sidebar">
+        <label for="menuToggle" class="close-btn" aria-label="Fechar menu">×</label>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="carrinho.html">Carrinho</a>
+            <a href="usuario.html">Configurações</a>
+        </nav>
+    </aside>
+<main class="finalizar">
+
+    <section class="banner-sucesso">
+        <img class="gatobatendopalma" src="../imagens/gatobatendopalma.gif" alt="">
+        <h2>Pedido realizado! Obrigado por comprar na Minac.</h2>
+        <p>Número do pedido: #<span id="numPedido">000123</span></p>
+    </section>
+
+    <section class="card-resumo">
+        <h2>Resumo do pedido</h2>
+        
+        <div id="listaProdutosFinal"></div>
+
+        <div class="linha">
+            <span>Frete</span>
+            <span id="valorFrete">R$ 0,00</span>
+        </div>
+        <div class="linha total">
+            <span>Total</span>
+            <span id="valorTotalGeral">R$ 0,00</span>
+        </div>
+    </section>
+
+    <section class="card-resumo">
+        <h2>Entrega e pagamento</h2>
+        <dl>
+            <div class="linha"><dt>Nome</dt><dd id="resumoNome">[Nome informado]</dd></div>
+            <div class="linha"><dt>CEP</dt><dd id="resumoCep">[CEP informado]</dd></div>
+            <div class="linha"><dt>Entrega</dt><dd id="resumoEntrega">[Tipo de entrega]</dd></div>
+            <div class="linha"><dt>Pagamento</dt><dd id="resumoPagamento">[Cartão ou Pix]</dd></div>
+        </dl>
+    </section>
+
+    <div class="acoes-finais">
+        <a href="../index.html" class="btn-osso" id="btnVoltarLoja">Voltar à loja</a>
+    </div>
+
+</main>
+<script type="module" src="../Script/finalizarCompra.js"></script>
+
+</body>
+</html>
