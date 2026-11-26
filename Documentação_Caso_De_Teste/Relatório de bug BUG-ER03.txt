@@ -1,0 +1,6 @@
+Relatório de bug BUG-ER03
+- Pré-requisito: Clicar no botão de trocar de tema
+- Cenário: pagina de tela dentro de configurações
+- Comportamento esperado: O tema da pagina deveria mudar de acordo com a opção selecionada
+- Comportamento adquirido: O tema não muda, e continua no tema claro
+- Conclusão: Negativa

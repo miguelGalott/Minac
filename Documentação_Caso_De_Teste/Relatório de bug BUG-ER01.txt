@@ -1,0 +1,6 @@
+Relatório de bug BUG-ER01
+- Pré-requisito: clicar no botão de salvar dados
+- Cenário: Configurações na tela de salvar dados
+- Comportamento esperado: ao clicar no botão os dados do cliente devem ser salvos
+- Comportamento adquirido: O usuário é direcionado para uma pagina que não está funcionando(HTTP ERROR 405)
+- Conclusão: Negativa
