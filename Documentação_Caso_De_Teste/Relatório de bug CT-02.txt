@@ -1,0 +1,6 @@
+Relatório de bug CT-02
+- Pré-requisito: Entrar na pagina de histórico
+- Cenário: Tela de histórico dentro de configurações
+- Comportamento esperado: O histórico de compras deveria mostrar as compras já realizadas anteriormente
+- Comportamento adquirido: A compra não é registrada no histórico
+- Conclusão: Negativa

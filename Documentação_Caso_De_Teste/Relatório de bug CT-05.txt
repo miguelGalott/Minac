@@ -1,0 +1,6 @@
+Relatório de bug CT-05
+- Pré-requisito: clicar no botão de filtragem de pássaros
+- Cenário: Tela principal(dentro de filtragem)
+- Comportamento esperado: apenas itens relacionados a pássaros deveriam aparecer
+- Comportamento adquirido: foi encontrado itens relacionados a cães
+- Conclusão: Negativa
