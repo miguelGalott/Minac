@@ -1,7 +1,9 @@
 import { puxarProdutos } from './carrinho.js';
 import { formatarBRL } from './produtos.js';
+import { registrarPedido } from './historico.js';
 
 const CHAVE_PEDIDO = 'PedidoDadosSeguros';
+const CHAVE_NUMERO = 'PedidoNumeroRegistrado';
 
 async function inicializarFinalizacao() {
 
@@ -58,6 +60,14 @@ async function inicializarFinalizacao() {
 
     const totalGeral = subtotalProdutos + valorFrete;
     document.getElementById('valorTotalGeral').textContent = formatarBRL(totalGeral);
+
+    // registra a compra no histórico (uma única vez, mesmo se a página for recarregada)
+    let numeroPedido = sessionStorage.getItem(CHAVE_NUMERO);
+    if (!numeroPedido && produtosCarrinho.length > 0) {
+        numeroPedido = registrarPedido({ itens: produtosCarrinho, frete: valorFrete, total: totalGeral });
+        sessionStorage.setItem(CHAVE_NUMERO, numeroPedido);
+    }
+    if (numeroPedido) document.getElementById('numPedido').textContent = numeroPedido;
 
 
 }

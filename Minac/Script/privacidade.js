@@ -26,7 +26,7 @@ export function formatarTelefone(valor) {
 }
 
 export function formatarCartao(valor) {
-    return apenasDigitos(valor).slice(0, 19).replace(/(\d{4})(?=\d)/g, '$1 ');
+    return apenasDigitos(valor).slice(0, 16).replace(/(\d{4})(?=\d)/g, '$1 ');
 }
 
 export function formatarValidade(valor) {
@@ -62,7 +62,7 @@ export function cepValido(valor) {
 
 export function cartaoValido(valor) {
     const d = apenasDigitos(valor);
-    if (d.length < 13 || d.length > 19) return false;
+    if (d.length !== 16) return false; // cartão com 16 algarismos
 
     let soma = 0;
     let dobrar = false;
@@ -120,4 +120,10 @@ export function mascararCep(valor) {
 export function mascararCartao(valor) {
     const d = apenasDigitos(valor);
     return d.length >= 4 ? `•••• ${d.slice(-4)}` : '';
+}
+
+// máscara usada DENTRO do campo quando ele perde o foco (mostra só os 4 últimos)
+export function mascararCartaoCampo(valor) {
+    const d = apenasDigitos(valor);
+    return d.length === 16 ? `•••• •••• •••• ${d.slice(-4)}` : '';
 }

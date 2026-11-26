@@ -3,55 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de compra - Minac</title>
+    <title>Meu carrinho - Minac</title>
     <link rel="icon" href="../imagens/logoMinac.png">
     <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Alike&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/cores.css">
     <link rel="stylesheet" href="../Css/geral.css">
+    <link rel="stylesheet" href="../Css/carrinho.css">
+    <link rel="stylesheet" href="../Css/tema.css">
+    <script src="../Script/theme.js"></script>
 </head>
-<body>
+<body class="pagina-carrinho">
 
-    <header id="topoDiv">
-        <a href="../index.html"><img id="logoTopoDiv" src="../imagens/voltar.png" alt="Voltar para a loja"></a>
-
-        <div class="carrinho-container">
-            <img id="carrinhoTopo" src="../imagens/carrinhoMinac.png" alt="Carrinho">
-            <span class="visually-hidden">Carrinho</span>
-        </div>
-
-        <div class="topo-pesquisa-voltar" role="search">
-            <label for="barraPesquisa" class="visually-hidden">Pesquisar produtos</label>
-            <input type="text" id="barraPesquisa" name="barraPesquisa" placeholder="Digite um item para seu Pet">
-            <span class="icone-pesquisa" aria-hidden="true">🧶</span>
-        </div>
+    <header class="topo-carrinho">
+        <a href="../index.html" class="voltar-topo"><img id="logoTopoDiv" src="../imagens/voltar.png" alt="Voltar à loja"></a>
+        <h1>🛒 Meu carrinho</h1>
     </header>
 
-    <main class="produto-container">
+    <ol class="etapas" aria-label="Etapas da compra">
+        <li class="atual" aria-current="step"><span>1</span> Carrinho</li>
+        <li><span>2</span> Seus dados</li>
+        <li><span>3</span> Pronto!</li>
+    </ol>
 
-        <div class="separar"></div>
+    <main class="carrinho-layout">
 
-        <div class="barra-informativa">
-            <h2>Produtos adicionados</h2>
-            <h2>Quantidade</h2>
-            <h2>Preço total</h2>
-        </div>
-
-        <div class="carrinho-produtos">
-            <p>Carregando carrinho...</p>
-        </div>
-
-        <footer class="rodape-carrinho">
-            <div class="selecionar-todos">
-                <input type="checkbox" id="selecionarTudo">
-                <label for="selecionarTudo">Selecionar tudo</label>
-                <button type="button" class="btn-remover-selecionados" aria-label="Remover itens selecionados" disabled>&#10005;</button>
+        <section class="lista-carrinho" aria-label="Produtos no carrinho">
+            <div class="barra-selecao">
+                <div class="selecionar-todos">
+                    <input type="checkbox" id="selecionarTudo">
+                    <label for="selecionarTudo">Selecionar tudo</label>
+                </div>
+                <button type="button" class="btn-remover-selecionados" disabled>🗑 Remover selecionados</button>
             </div>
 
-            <div class="resumo-final">
-                <span class="total-texto">Total (0 itens) <strong>R$ 0,00</strong></span>
-                <a href="preencherInfo.html" class="btn-finalizar-compra desativado" aria-label="Finalizar compra" aria-disabled="true">&#10003;</a>
+            <div class="carrinho-produtos">
+                <p class="carrinho-mensagem">Carregando seu carrinho...</p>
             </div>
-        </footer>
+        </section>
+
+        <aside class="resumo-carrinho" aria-label="Resumo da compra">
+            <h2>Resumo</h2>
+            <span class="total-texto">Total (0 itens) <strong>R$ 0,00</strong></span>
+            <p class="dica-resumo" id="dicaResumo">Marque os produtos que você quer comprar.</p>
+            <a href="preencherInfo.html" class="btn-finalizar-compra desativado" aria-disabled="true">Finalizar compra <span aria-hidden="true">&#10140;</span></a>
+            <p class="nota-resumo">O frete é escolhido no próximo passo. Retirar na loja é grátis.</p>
+        </aside>
 
     </main>
 

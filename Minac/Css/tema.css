@@ -1,0 +1,48 @@
+/* ===================== TEMA ESCURO ===================== */
+/* Ativado por <html data-tema="escuro"> (ver Script/theme.js). */
+html[data-tema="escuro"] {
+    color-scheme: dark;
+
+    --amarelo-topo: #2e2916;
+    --creme-fundo: #1a1812;
+    --laranja-categorias: #7a4f12;
+    --bege-card: #2b261b;
+    --cinza-rodape: #26241f;
+    --preto: #f3ead2;        /* texto, bordas e traços ficam claros */
+    --branco: #34301f;       /* cartões e campos que eram brancos */
+    --campo: #2b2819;
+    --creme-campo: #2b2819;
+    --texto-suave: #cfc5a8;
+}
+
+/* botões que eram pretos com texto branco: agora claros com texto escuro */
+html[data-tema="escuro"] .btn-carrinho-card,
+html[data-tema="escuro"] .btn-remover-selecionados,
+html[data-tema="escuro"] .btn-finalizar-compra,
+html[data-tema="escuro"] .btn-voltar { color: #1a1812; }
+
+html[data-tema="escuro"] .seta-carrossel { background: #5a5240; color: #fff; }
+html[data-tema="escuro"] .bar-categorias a:hover { background: #4a3a1c; }
+html[data-tema="escuro"] .abas label:hover { background: #8f5f18; }
+html[data-tema="escuro"] .painel-caixa { background: #2e2916; }
+html[data-tema="escuro"] .foto-card figcaption { background: rgba(46, 41, 22, 0.92); }
+html[data-tema="escuro"] .seletor-quantidade button,
+html[data-tema="escuro"] .btn-colocar-carrinho { background: #8f5f18; color: var(--preto); }
+
+html[data-tema="escuro"] .opcao small,
+html[data-tema="escuro"] .subtitulo-catalogo,
+html[data-tema="escuro"] .produto-preco-antigo,
+html[data-tema="escuro"] .preco-riscado,
+html[data-tema="escuro"] .pagina-info .aviso-exemplo { color: #cfc5a8; }
+
+html[data-tema="escuro"] .privacidade a,
+html[data-tema="escuro"] .pagina-info a,
+html[data-tema="escuro"] .links-detalhes a { color: #8fb8ff; }
+
+html[data-tema="escuro"] .destaque-verde { color: #7fd99a; }
+html[data-tema="escuro"] .termos-aviso { color: #ff8a80; }
+html[data-tema="escuro"] .btn-termos:disabled { background: #3a362b; color: #9a9582; border-color: #6a6657; }
+html[data-tema="escuro"] .divisor-suave { border-top-color: rgba(243, 234, 210, 0.3); }
+html[data-tema="escuro"] .linha + .linha { border-top-color: rgba(243, 234, 210, 0.2); }
+
+/* imagens de produto têm fundo próprio, então não mexemos nelas */

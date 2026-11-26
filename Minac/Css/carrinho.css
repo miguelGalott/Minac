@@ -1,0 +1,260 @@
+/* ===================== PÁGINA DO CARRINHO ===================== */
+/* Tudo começa com body.pagina-carrinho para não afetar as outras páginas. */
+
+body.pagina-carrinho { font-size: 1.05rem; }
+
+/* ---------- topo ---------- */
+.pagina-carrinho .topo-carrinho {
+    background: var(--amarelo-topo);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 40px;
+    border-bottom: 3px solid var(--preto);
+}
+.pagina-carrinho .topo-carrinho h1 { font-size: 1.9rem; font-weight: normal; }
+
+.pagina-carrinho .voltar-loja {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    background: var(--branco);
+    border: 3px solid var(--preto);
+    border-radius: 40px;
+    box-shadow: 0 3px 0 #555;
+    font-size: 1.05rem;
+    transition: transform .15s, box-shadow .15s;
+}
+.pagina-carrinho .voltar-loja:hover { transform: translateY(2px); box-shadow: 0 1px 0 #555; }
+
+/* ---------- etapas ---------- */
+.pagina-carrinho .etapas {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 22px 20px 0;
+}
+.pagina-carrinho .etapas li {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px 8px 8px;
+    border-radius: 40px;
+    background: var(--bege-card);
+    color: var(--texto-suave, #6b624f);
+    font-size: 1rem;
+}
+.pagina-carrinho .etapas li span {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--branco);
+    border: 2px solid currentColor;
+    font-size: .95rem;
+}
+.pagina-carrinho .etapas li.atual {
+    background: var(--laranja-categorias);
+    color: var(--preto);
+    font-weight: bold;
+}
+.pagina-carrinho .etapas li.atual span { background: var(--preto); color: var(--creme-fundo); border-color: var(--preto); }
+
+/* ---------- layout em duas colunas ---------- */
+.pagina-carrinho .carrinho-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 26px 24px 60px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 28px;
+    align-items: start;
+}
+
+/* ---------- barra "selecionar tudo" ---------- */
+.pagina-carrinho .barra-selecao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 20px;
+    background: var(--amarelo-topo);
+    border-radius: 22px;
+}
+.pagina-carrinho .selecionar-todos { display: flex; align-items: center; gap: 12px; }
+.pagina-carrinho .selecionar-todos label { cursor: pointer; font-size: 1.1rem; }
+.pagina-carrinho input[type="checkbox"] {
+    width: 26px; height: 26px;
+    accent-color: #1b7a3a;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.pagina-carrinho .btn-remover-selecionados {
+    width: auto; height: auto;
+    padding: 10px 20px;
+    border: 2px solid #b3261e;
+    border-radius: 30px;
+    background: transparent;
+    color: #b3261e;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+}
+.pagina-carrinho .btn-remover-selecionados:hover:not(:disabled) { background: #b3261e; color: #fff; }
+
+/* ---------- itens ---------- */
+.pagina-carrinho .carrinho-produtos { gap: 16px; margin: 18px 0 0; }
+
+.pagina-carrinho .item-carrinho {
+    display: grid;
+    grid-template-columns: 34px 110px minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 22px;
+    background: var(--bege-card);
+    border: 3px solid transparent;
+    border-radius: 28px;
+    transition: border-color .15s;
+}
+.pagina-carrinho .item-carrinho:has(.check-item:checked) { border-color: #1b7a3a; }
+
+.pagina-carrinho .foto-carrinho { width: 110px; height: 110px; border-radius: 20px; padding: 6px; }
+
+.pagina-carrinho .info-produto { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; }
+.pagina-carrinho .nome-produto { font-size: 1.15rem; line-height: 1.3; }
+.pagina-carrinho .preco-unitario { color: var(--texto-suave, #6b624f); font-size: .95rem; }
+
+.pagina-carrinho .btn-remover-item {
+    margin-top: 4px;
+    padding: 4px 0;
+    background: none;
+    border: none;
+    color: #b3261e;
+    font-family: inherit;
+    font-size: .95rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.pagina-carrinho .btn-remover-item:hover { text-decoration: none; }
+
+.pagina-carrinho .controle-quantidade {
+    gap: 6px;
+    padding: 6px;
+    background: var(--branco);
+    border: 2px solid var(--preto);
+    border-radius: 40px;
+}
+.pagina-carrinho .btn-qtd {
+    width: 40px; height: 40px;
+    border: none;
+    background: var(--laranja-categorias);
+    color: var(--preto);
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: transform .1s;
+}
+.pagina-carrinho .btn-qtd:hover:not(:disabled) { transform: scale(1.08); }
+.pagina-carrinho .qtd-numero { min-width: 34px; text-align: center; font-size: 1.2rem; font-weight: bold; }
+
+.pagina-carrinho .preco-subtotal { min-width: 110px; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; font-size: 1.3rem; }
+.pagina-carrinho .preco-subtotal small { font-size: .8rem; font-weight: normal; color: var(--texto-suave, #6b624f); }
+
+/* ---------- carrinho vazio / mensagens ---------- */
+.pagina-carrinho .carrinho-mensagem { padding: 30px; text-align: center; }
+.pagina-carrinho .carrinho-vazio {
+    text-align: center;
+    padding: 50px 24px;
+    background: var(--bege-card);
+    border-radius: 30px;
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.pagina-carrinho .carrinho-vazio .emoji { font-size: 4rem; }
+.pagina-carrinho .carrinho-vazio h2 { font-size: 1.5rem; font-weight: normal; }
+.pagina-carrinho .btn-continuar {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 14px 30px;
+    background: #1b7a3a;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 0 #0f4d23;
+}
+
+/* ---------- resumo ---------- */
+.pagina-carrinho .resumo-carrinho {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 26px 24px;
+    background: var(--amarelo-topo);
+    border: 3px solid var(--preto);
+    border-radius: 30px;
+    box-shadow: 0 6px 0 #555;
+}
+.pagina-carrinho .resumo-carrinho h2 { font-size: 1.4rem; font-weight: normal; }
+
+.pagina-carrinho .total-texto { display: flex; flex-direction: column; gap: 4px; font-size: 1rem; color: var(--texto-suave, #6b624f); }
+.pagina-carrinho .total-texto strong { font-size: 2.2rem; color: var(--preto); }
+
+.pagina-carrinho .dica-resumo { font-size: .95rem; color: #b3261e; }
+.pagina-carrinho .dica-resumo[hidden] { display: none; }
+.pagina-carrinho .nota-resumo { font-size: .85rem; color: var(--texto-suave, #6b624f); line-height: 1.4; }
+
+.pagina-carrinho .btn-finalizar-compra {
+    width: 100%; height: auto;
+    padding: 16px 20px;
+    border-radius: 40px;
+    background: #1b7a3a;
+    color: #fff;
+    font-size: 1.25rem;
+    gap: 10px;
+    box-shadow: 0 5px 0 #0f4d23;
+    transition: transform .15s, box-shadow .15s;
+}
+.pagina-carrinho .btn-finalizar-compra:hover { transform: translateY(2px); box-shadow: 0 3px 0 #0f4d23; }
+.pagina-carrinho .btn-finalizar-compra.desativado { background: #9a9a9a; box-shadow: 0 5px 0 #6f6f6f; opacity: .7; }
+
+/* ---------- tema escuro ---------- */
+html[data-tema="escuro"] .pagina-carrinho .btn-finalizar-compra,
+html[data-tema="escuro"] .pagina-carrinho .btn-continuar { color: #fff; }
+html[data-tema="escuro"] .pagina-carrinho .btn-remover-selecionados,
+html[data-tema="escuro"] .pagina-carrinho .btn-remover-item { color: #ff8a80; border-color: #ff8a80; }
+html[data-tema="escuro"] .pagina-carrinho .btn-remover-item { border: none; }
+html[data-tema="escuro"] .pagina-carrinho .btn-remover-selecionados:hover:not(:disabled) { background: #ff8a80; color: #1a1812; }
+html[data-tema="escuro"] .pagina-carrinho .dica-resumo { color: #ff8a80; }
+
+/* ---------- celular / tela estreita ---------- */
+@media (max-width: 860px) {
+    .pagina-carrinho .topo-carrinho { padding: 14px 18px; flex-wrap: wrap; gap: 12px; }
+    .pagina-carrinho .topo-carrinho h1 { font-size: 1.5rem; }
+    .pagina-carrinho .carrinho-layout { grid-template-columns: 1fr; padding: 20px 14px 50px; }
+    .pagina-carrinho .resumo-carrinho { position: static; }
+
+    .pagina-carrinho .item-carrinho {
+        grid-template-columns: 30px 84px minmax(0, 1fr);
+        grid-template-areas:
+            "check foto info"
+            "qtd   qtd  sub";
+        gap: 14px;
+        padding: 16px;
+    }
+    .pagina-carrinho .item-carrinho > .check-item { grid-area: check; }
+    .pagina-carrinho .item-carrinho > a { grid-area: foto; }
+    .pagina-carrinho .info-produto { grid-area: info; }
+    .pagina-carrinho .controle-quantidade { grid-area: qtd; justify-self: start; }
+    .pagina-carrinho .preco-subtotal { grid-area: sub; }
+    .pagina-carrinho .foto-carrinho { width: 84px; height: 84px; }
+}
+
+@media (max-width: 480px) {
+    .pagina-carrinho .etapas li { font-size: .85rem; padding-right: 12px; }
+    .pagina-carrinho .barra-selecao { justify-content: center; }
+}

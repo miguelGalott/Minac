@@ -14,7 +14,7 @@
     "title": "Ração Premium Cães Adultos Frango e Arroz 15kg",
     "price": 189.90,
     "category": "Rações",
-    "animal": "gatos",
+    "animal": "cachorro",
     "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=500&auto=format&fit=crop&q=60"
   },
@@ -50,7 +50,7 @@
     "title": "Brinquedo Mordedor de Borracha Resistente",
     "price": 29.90,
     "category": "Brinquedos",
-    "animal": "passaros",
+    "animal": "cachorro",
     "promocoes": "true",
     "image": "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=500&auto=format&fit=crop&q=60"
   },

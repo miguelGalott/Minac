@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../Css/cores.css">
     <link rel="stylesheet" href="../Css/geral.css">
     <link rel="stylesheet" href="../Css/paginas.css">
+    <link rel="stylesheet" href="../Css/tema.css">
+    <script src="../Script/theme.js"></script>
 </head>
 <body>
 
@@ -88,7 +90,7 @@
                         <div class="campos-cartao">
                             <div class="campo">
                                 <label for="numCartao">Número do cartão:</label>
-                                <input type="text" id="numCartao" name="numCartao" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" maxlength="23" required>
+                                <input type="text" id="numCartao" name="numCartao" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" maxlength="19" required>
                             </div>
                             <div class="campo">
                                 <label for="nomeCartao">Nome no cartão:</label>
@@ -131,13 +133,14 @@
                 <h2 id="tituloPrivacidade">Seus dados e a LGPD</h2>
                 <ul>
                     <li>Pedimos só o necessário para processar e entregar o seu pedido.</li>
-                    <li>Mostramos seus dados de forma parcial nas próximas telas (ex.: CPF ***.456.789-**).</li>
+                    <li>CPF, e-mail, telefone, CEP e cartão ficam mascarados quando você sai do campo (ex.: CPF ***.456.789-**) e aparecem inteiros só enquanto você digita.</li>
+                    <li>Nas próximas telas também mostramos seus dados de forma parcial.</li>
                     <li>Não armazenamos o número do cartão nem o código de segurança.</li>
                     <li>Você pode pedir acesso, correção ou exclusão dos seus dados quando quiser (art. 18 da Lei 13.709/2018, a LGPD).</li>
                 </ul>
                 <label class="campo-consentimento">
                     <input type="checkbox" name="ciencia" required>
-                    <span>Li e estou ciente de como meus dados serão tratados, conforme a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
+                    <span>Li e estou ciente de como meus dados serão tratados, conforme a <a href="privacidade.html?voltar=preencherInfo.html" data-guardar-rascunho>Política de Privacidade</a>.</span>
                 </label>
             </section>
 

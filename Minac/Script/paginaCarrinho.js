@@ -6,6 +6,7 @@ const checkTudo = document.querySelector('#selecionarTudo');
 const btnRemoverSelecionados = document.querySelector('.btn-remover-selecionados');
 const totalTexto = document.querySelector('.total-texto');
 const btnFinalizar = document.querySelector('.btn-finalizar-compra');
+const dicaResumo = document.querySelector('#dicaResumo');
 
 const MIN = 1;
 const MAX = 99;
@@ -15,7 +16,13 @@ const selecionados = new Set();
 
 function renderizarCarrinho() {
     if (itens.length === 0) {
-        containerCarrinho.innerHTML = '<p>Seu carrinho está vazio.</p>';
+        containerCarrinho.innerHTML = `
+            <div class="carrinho-vazio">
+                <span class="emoji" aria-hidden="true">🐾</span>
+                <h2>Seu carrinho está vazio</h2>
+                <p>Que tal dar uma olhada nos produtos para o seu pet?</p>
+                <a href="../index.html" class="btn-continuar">Ver produtos</a>
+            </div>`;
     } else {
         containerCarrinho.innerHTML = itens.map(item => `
             <div class="item-carrinho" data-id="${item.id}">
@@ -28,7 +35,8 @@ function renderizarCarrinho() {
 
                 <div class="info-produto">
                     <p class="nome-produto">${item.title}</p>
-                    <span class="preco-unitario">${formatarBRL(item.price)}</span>
+                    <span class="preco-unitario">${formatarBRL(item.price)} cada</span>
+                    <button type="button" class="btn-remover-item" aria-label="Remover ${item.title} do carrinho">Remover</button>
                 </div>
 
                 <div class="controle-quantidade">
@@ -40,6 +48,7 @@ function renderizarCarrinho() {
                 </div>
 
                 <div class="preco-subtotal">
+                    <small>Subtotal</small>
                     <span>${formatarBRL(item.subtotal)}</span>
                 </div>
             </div>
@@ -61,6 +70,7 @@ function atualizarResumo() {
 
     btnFinalizar.classList.toggle('desativado', marcados.length === 0);
     btnFinalizar.setAttribute('aria-disabled', String(marcados.length === 0));
+    if (dicaResumo) dicaResumo.hidden = marcados.length > 0 || itens.length === 0;
 }
 
 function mudarQuantidade(id, delta) {
@@ -82,6 +92,16 @@ function removerSelecionados() {
 }
 
 containerCarrinho.addEventListener('click', evento => {
+    const botaoRemover = evento.target.closest('.btn-remover-item');
+    if (botaoRemover) {
+        const id = Number(botaoRemover.closest('.item-carrinho').dataset.id);
+        removerDoCarrinho(id);
+        itens = itens.filter(item => item.id !== id);
+        selecionados.delete(id);
+        renderizarCarrinho();
+        return;
+    }
+
     const botao = evento.target.closest('.btn-qtd');
     if (!botao) return;
 

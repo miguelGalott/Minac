@@ -98,7 +98,7 @@
     font-family: inherit;
     font-size: 1.05rem;
     color: var(--preto);
-    background: #F7F7F7;
+    background: var(--campo);
     border: 3px solid var(--preto);
     border-radius: 30px;
     box-shadow: 0 3px 0 #555;
@@ -108,7 +108,7 @@
 .campo input::placeholder { color: #888; }
 
 .campo input:focus {
-    background: #fff;
+    background: var(--branco);
     border-color: #c77700;
     box-shadow: 0 3px 0 #c77700;
 }
@@ -132,7 +132,7 @@
     align-items: center;
     gap: 8px;
     padding: 14px 10px;
-    background: #fff;
+    background: var(--branco);
     border: 3px solid var(--preto);
     border-radius: 24px;
     font-size: 1.1rem;
@@ -164,7 +164,7 @@
 
 .campos-pix {
     padding: 20px;
-    background: #fff;
+    background: var(--branco);
     border: 3px dashed var(--preto);
     border-radius: 24px;
     text-align: center;
@@ -243,7 +243,7 @@
     width: 72px;
     height: 72px;
     object-fit: contain;
-    background: #fff;
+    background: var(--branco);
     border-radius: 14px;
     flex-shrink: 0;
 }
@@ -349,7 +349,7 @@
     align-items: flex-start;
     gap: 16px;
     padding: 16px 20px;
-    background: #fff;
+    background: var(--branco);
     border: 3px solid var(--preto);
     border-radius: 24px;
     cursor: pointer;
@@ -383,7 +383,7 @@
     align-items: center;
     gap: 16px;
     padding: 16px 22px;
-    background: #fff;
+    background: var(--branco);
     border: 3px solid var(--preto);
     border-radius: 24px;
 }
@@ -424,3 +424,7 @@
 @media (prefers-reduced-motion: reduce) {
     .btn-osso, .opcoes-pagamento label, .sidebar { transition: none; }
 }
+.aviso-salvar { margin-top: 12px; min-height: 1.4em; font-size: 1rem; color: #1b7a3a; }
+.aviso-salvar.erro { color: #b3261e; }
+html[data-tema="escuro"] .aviso-salvar { color: #7fd99a; }
+html[data-tema="escuro"] .aviso-salvar.erro { color: #ff8a80; }

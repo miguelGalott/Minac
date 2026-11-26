@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../Css/cores.css">
     <link rel="stylesheet" href="../Css/geral.css">
     <link rel="stylesheet" href="../Css/paginas.css">
+    <link rel="stylesheet" href="../Css/tema.css">
+    <script src="../Script/theme.js"></script>
 </head>
 <body>
 
@@ -57,7 +59,7 @@
             </section>
 
             <section class="painel" id="painelUsuario">
-                <form action="#" method="post">
+                <form action="#">
                     <div class="campo">
                         <label for="uNome">Nome:</label>
                         <input type="text" id="uNome" name="nome" autocomplete="name">
@@ -72,22 +74,18 @@
                     </div>
                     <div style="text-align:center; padding-top:10px;">
                         <button type="submit" class="btn-osso">Salvar</button>
+                        <p id="avisoSalvar" class="aviso-salvar" role="status" aria-live="polite"></p>
                     </div>
                 </form>
             </section>
 
             <section class="painel" id="painelHistorico">
-                <!-- Pedidos de exemplo: troque pelos pedidos reais -->
-                <article class="item-historico">
-                    <span>Pedido #000123</span><span>[Data]</span><strong>R$ 00,00</strong>
-                </article>
-                <article class="item-historico">
-                    <span>Pedido #000122</span><span>[Data]</span><strong>R$ 00,00</strong>
-                </article>
+                <!-- Os pedidos são preenchidos por Script/usuario.js -->
             </section>
 
         </div>
     </main>
 
+    <script type="module" src="../Script/usuario.js"></script>
 </body>
 </html>
